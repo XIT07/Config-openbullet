@@ -5,7 +5,7 @@
 
 <p align="center">
 <a href="#"><img src="https://img.shields.io/discord/682411746862170175?label=Discord&style=flat-square"></a> ||
-<a href="https://github.com/openbullet/openbullet/releases/"><img src="https://img.shields.io/github/downloads/openbullet/openbullet/total?label=OPENBULLET&style=flat-square" alt="Openbullet"></a> ||
+<a href="https://github.com/openbullet/openbullet/releases/?ref=shields_button_download_from_profile_XIT07"><img src="https://img.shields.io/github/downloads/openbullet/openbullet/total?label=OPENBULLET&style=flat-square" alt="Openbullet"></a> ||
 <a href="https://github.com/XIT07/Config-openbullet/blob/master/LICENSE"><img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="License"></a>
 </p>
 
