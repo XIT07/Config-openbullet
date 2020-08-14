@@ -48,3 +48,16 @@
 -Combo:Email:Pass
 
 ```
+
+### 4-Needrom
+
+* [Needrom](https://github.com/XIT07/Config-openbullet/blob/master/Needrom.com.loli) - Needrom.com.loli
+
+```
+-Capture:YES {FULL}
+-Bot:30/150
+-CPM:+100
+-Proxy Needed 
+-Combo:User:Pass
+
+```
