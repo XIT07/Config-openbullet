@@ -1,6 +1,8 @@
 
 ## CONFIGS OPENBULLET
 
+<p align="center"><img src="https://i.imgur.com/93kYZm4.gif" alt="XIT07" width="350" height="80" style="border-radius: 2px;"></p>
+
 <p align="center">
 <a href="#"><img src="https://img.shields.io/discord/682411746862170175?label=Discord&style=flat-square"></a> ||
 <a href="https://github.com/openbullet/openbullet/releases/"><img src="https://img.shields.io/github/downloads/openbullet/openbullet/total?label=OPENBULLET&style=flat-square" alt="Openbullet"></a> ||
