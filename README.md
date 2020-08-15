@@ -33,6 +33,8 @@
 
 ```
 
+<hr>
+
 ### 2-CARDING.NETWORK
 
 * [CARDING.NETWORK](https://github.com/XIT07/Config-openbullet/blob/master/carding.network.loli) - CARDING.NETWORK.loli
@@ -45,6 +47,8 @@
 -Combo:Email:Pass | User:Pass
 
 ```
+
+<hr>
 
 ### 3-Smscodes
 
@@ -59,6 +63,8 @@
 
 ```
 
+<hr>
+
 ### 4-Needrom
 
 * [Needrom](https://github.com/XIT07/Config-openbullet/blob/master/Needrom.com.loli) - Needrom.com.loli
@@ -71,3 +77,5 @@
 -Combo:User:Pass
 
 ```
+
+<hr>
