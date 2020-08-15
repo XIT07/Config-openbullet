@@ -8,6 +8,16 @@
 <a href="https://github.com/openbullet/openbullet/releases/?ref=shields_button_download_from_profile_XIT07"><img src="https://img.shields.io/github/downloads/openbullet/openbullet/total?label=OPENBULLET&style=flat-square" alt="Openbullet"></a> ||
 <a href="https://github.com/XIT07/Config-openbullet/blob/master/LICENSE"><img src="https://img.shields.io/badge/License-MIT-brightgreen.svg" alt="License"></a>
 </p>
+<br>
+
+<table border="0" cellpadding="2" cellspacing="2" width="100%">
+  <tr>
+    <td align="center"><img title="Legal desclaimer" src="https://imgur.com/7OzJEBI.png"></td>
+     <td align="center"> <b><a href="https://github.com/XIT07">XIT07</a> is not responsible for any misuse, damage caused by this script or attacking targets without prior mutual consent! It is your responsibility to obey laws!</b>
+    </td>
+  </tr>
+</table>
+<br>
 
 ### 1-ANTIPUBLIC COMBO
 
