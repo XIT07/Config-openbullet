@@ -19,21 +19,6 @@
 </table>
 <br>
 
-<table border="0" cellpadding="0" cellspacing="2" width="100%">
-  <tr>
-    <td width="100px" class="main2"><b>Codename:</b></td><td width="780px">COB</td>
-  </tr>
-   <tr>
-    <td width="100px" class="main2"><b>AUTHOR:</b></td><td width="780px">XIT07</td>
-  </tr>
-  <tr>
-    <td width="100px" class="main2"><b>Store:</b></td><td width="780px"><a href="https://sellix.io/xit07?ref=_from_table_COB_store_in_github">Sellix.io/xit07</a></td>
-  </tr>
-  <tr>
-    <td width="100px" class="main2"><b>Instagram:</b></td><td width="780px"><a href="https://instagr.am/xit07?ref=_from_table_COB_instagram_in_github">instagr.am/xit07</a></td>
-  </tr>
-</table>
-
 ### 1-ANTIPUBLIC COMBO
 
 * [ANTIPUBLIC FAST](https://github.com/XIT07/Config-openbullet/blob/master/ANTIPUBLIC%20FAST.loli) - ANTIPUBLIC FAST.loli
