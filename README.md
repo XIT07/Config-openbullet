@@ -79,3 +79,16 @@
 ```
 
 <hr>
+
+### 4-VYPRVPN
+
+* [Needrom]() - VYPRVPN API.loli
+
+```
+-Capture:YES {SEMI-FULL}
+-Bot:75
+-CPM:15/40
+-Proxy Needed 
+-Combo:Mail:Pass | User:Pass
+
+```
