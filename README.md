@@ -80,9 +80,9 @@
 
 <hr>
 
-### 4-VYPRVPN
+### 5-VYPRVPN
 
-* [Needrom]() - VYPRVPN API.loli
+* [VYPRVPN]() - VYPRVPN API.loli
 
 ```
 -Capture:YES {SEMI-FULL}
