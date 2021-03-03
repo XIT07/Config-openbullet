@@ -82,7 +82,7 @@
 
 ### 5-VYPRVPN
 
-* [VYPRVPN]() - VYPRVPN API.loli
+* [VYPRVPN](https://github.com/XIT07/Config-openbullet/blob/master/VYPRVPN%20API.loli) - VYPRVPN API.loli
 
 ```
 -Capture:YES {SEMI-FULL}
