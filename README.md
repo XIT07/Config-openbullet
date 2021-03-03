@@ -79,3 +79,16 @@
 ```
 
 <hr>
+
+### 5-VYPRVPN
+
+* [VYPRVPN](https://github.com/XIT07/Config-openbullet/blob/master/VYPRVPN%20API.loli) - VYPRVPN API.loli
+
+```
+-Capture:YES {SEMI-FULL}
+-Bot:75
+-CPM:15/40
+-Proxy Needed 
+-Combo:Mail:Pass | User:Pass
+
+```
